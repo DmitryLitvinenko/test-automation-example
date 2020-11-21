@@ -1,25 +1,42 @@
 plugins {
     id 'java'
+    id 'io.qameta.allure' version '2.8.1'
 }
+
+apply plugin: 'io.qameta.allure'
 
 group 'test.automation.example'
 version '1.0-SNAPSHOT'
 
 repositories {
+    jcenter()
     mavenCentral()
 }
 
 dependencies {
-    //Test dependencies
+    //Selenide
+    testCompile 'com.codeborne:selenide:5.16.0'
+    //Allure
+    implementation('io.qameta.allure:allure-okhttp3:2.8.1')
+    testRuntimeOnly('io.qameta.allure:allure-junit5:2.8.1')
+    //JUnit
     testCompile('org.junit.jupiter:junit-jupiter:5.7.0')
-    compile group: 'com.codeborne', name: 'selenide', version: '5.16.0'
-    compile group: 'io.qameta.allure', name: 'allure-selenide', version: '2.13.6'
-
     //Lombok
     compileOnly 'org.projectlombok:lombok:1.18.16'
     annotationProcessor 'org.projectlombok:lombok:1.18.16'
     testCompileOnly 'org.projectlombok:lombok:1.18.16'
     testAnnotationProcessor 'org.projectlombok:lombok:1.18.16'
+}
+
+allure {
+    version = '2.7.0'
+    aspectjweaver = true
+    autoconfigure = true
+
+    useJUnit5 {
+        version = '2.0-BETA10'
+    }
+    downloadLink = 'https://dl.bintray.com/qameta/generic/io/qameta/allure/allure/2.1.1/allure-2.1.1.zip'
 }
 
 test {
