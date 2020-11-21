@@ -15,6 +15,8 @@ import java.util.stream.Collectors;
 
 @Log
 public class TestResultLoggerExtension implements TestWatcher, AfterAllCallback, BeforeEachCallback {
+    private TestResultLoggerExtension() {}
+
     private List<TestResultStatus> testResultsStatus = new ArrayList<>();
 
     private enum TestResultStatus {
