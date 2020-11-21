@@ -1,9 +1,9 @@
 TBD
 
-**Technologies: **
+**Technologies:**
 Java15, Gradle, Selenide, Junit5, Allure, ...
 
-**Additional info: **
+**Additional info:**
 * Upgrade Gradle:
         -> gradle wrapper --gradle-version 6.7.1
 * Allure with Gradle doc:
