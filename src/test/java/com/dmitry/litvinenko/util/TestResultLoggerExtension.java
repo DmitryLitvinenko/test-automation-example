@@ -1,4 +1,4 @@
-package com.dmitry.litvinenko.cases.util;
+package com.dmitry.litvinenko.util;
 
 import lombok.extern.java.Log;
 import org.junit.jupiter.api.extension.AfterAllCallback;

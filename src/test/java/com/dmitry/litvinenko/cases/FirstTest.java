@@ -1,6 +1,6 @@
 package com.dmitry.litvinenko.cases;
 
-import com.dmitry.litvinenko.cases.util.TestResultLoggerExtension;
+import com.dmitry.litvinenko.util.TestResultLoggerExtension;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
