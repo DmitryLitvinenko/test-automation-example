@@ -5,11 +5,15 @@ Java15, Gradle, Selenide, Junit5, Allure, ...
 
 **Run tests with gradle:** 
 * Run all tests:
-        -> gradle clean test
+
+        -> gradle clean test // gradle need to be installed, for example with brew
+        -> ./gradlew clean test //not required installed gradle
 * Run specific test:
-        -> 
+
+        -> ./gradlew test --tests *ExampleTest.negativeTest
 
 **Additional info:**
+
 * Upgrade Gradle:
         -> gradle wrapper --gradle-version 6.7.1
 * Allure with Gradle doc:
