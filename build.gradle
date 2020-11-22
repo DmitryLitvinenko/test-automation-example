@@ -42,6 +42,22 @@ allure {
     downloadLink = 'https://dl.bintray.com/qameta/generic/io/qameta/allure/allure/2.1.1/allure-2.1.1.zip'
 }
 
-test {
-    useJUnitPlatform()
+//run all tests -> ./gradlew test
+def test = tasks.named("test") {
+    useJUnitPlatform {
+    }
+}
+
+//run tests with tag "smoke" -> ./gradlew smokeTest
+def smokeTest = tasks.register("smokeTest", Test) {
+    useJUnitPlatform {
+        includeTags "smoke"
+    }
+}
+
+//run tests without tag "additional" -> ./gradlew defaultTest
+def defaultTest = tasks.register("defaultTest", Test) {
+    useJUnitPlatform {
+        excludeTags "additional"
+    }
 }

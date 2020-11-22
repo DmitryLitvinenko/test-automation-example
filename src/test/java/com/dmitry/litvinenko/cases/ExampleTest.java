@@ -15,18 +15,21 @@ import static org.junit.jupiter.api.Assertions.*;
 public class ExampleTest {
 
     @Test
+    @Tag("smoke")
     @DisplayName("Positive test")
     public void positiveTest() {
         assertTrue(true);
     }
 
     @Test
+    @Tag("smoke")
     @DisplayName("Negative test")
     public void negativeTest() {
         assertTrue(false);
     }
 
     @Test
+    @Tag("smoke")
     @DisplayName("Parallel test")
     public void parallelTest() {
         final String name = "Dimitry";
@@ -42,6 +45,7 @@ public class ExampleTest {
         );
     }
 
+    @Tag("full")
     @ParameterizedTest(name = "My birth year is not {0}")
     @ValueSource(ints = {2016, 2020, 2048})
     @DisplayName("Parameterized test")
@@ -50,15 +54,15 @@ public class ExampleTest {
     }
 
     @Test
-    @Tag("slow")
-    @DisplayName("Tag test, slow")
+    @Tag("additional")
+    @DisplayName("Additional test 1")
     public void testAddMaxInteger() {
         assertEquals(2147483646, Integer.sum(2147183646, 300000));
     }
 
     @Test
-    @Tag("fast")
-    @DisplayName("Tag test, fast")
+    @Tag("additional")
+    @DisplayName("Additional test 2")
     public void testDivide() {
         assertThrows(ArithmeticException.class, () -> divideUnsigned(42, 0));
     }
