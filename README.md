@@ -1,7 +1,7 @@
 TBD
 
 ## Technologies:
-Java15, Gradle, Selenide, Junit5, Allure, ...
+Java, Gradle, Selenide, Junit5, Allure, ...
 
 ## Run tests with gradle
 ### Run test example
