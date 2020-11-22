@@ -15,7 +15,7 @@ note: ./gradlew indicates you are using a gradle wrapper, without wrapper you wo
 ``
 ##### Run specific test:
 ```
-./gradlew test --tests *ExampleTest.negativeTest
+    ./gradlew test --tests *ExampleTest.negativeTest
 ```        
 ## Official documentation:
 * Allure with Gradle doc:
