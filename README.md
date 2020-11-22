@@ -3,7 +3,7 @@ TBD
 ## Technologies:
 Java15, Gradle, Selenide, Junit5, Allure, ...
 
-## Run tests with gradle:
+## Run tests with gradle
 ### Run test example
 * Run all tests
 ```
@@ -30,7 +30,7 @@ note: ./gradlew indicates you are using a gradle wrapper, without wrapper you wo
 ```
    ./gradlew test -Dorg.gradle.logging.level=info
 ```
-## Official documentation:
+## Official documentation
 * Allure with Gradle doc
 https://plugins.gradle.org/plugin/io.qameta.allure
 https://github.com/allure-framework/allure-gradle
