@@ -2,11 +2,13 @@ package com.dmitry.litvinenko.cases;
 
 import com.dmitry.litvinenko.util.TestResultLoggerExtension;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
+import static java.lang.Integer.divideUnsigned;
 import static org.junit.jupiter.api.Assertions.*;
 
 @ExtendWith(TestResultLoggerExtension.class)
@@ -47,4 +49,17 @@ public class ExampleTest {
         assertTrue(year != 1992);
     }
 
+    @Test
+    @Tag("slow")
+    @DisplayName("Tag test, slow")
+    public void testAddMaxInteger() {
+        assertEquals(2147483646, Integer.sum(2147183646, 300000));
+    }
+
+    @Test
+    @Tag("fast")
+    @DisplayName("Tag test, fast")
+    public void testDivide() {
+        assertThrows(ArithmeticException.class, () -> divideUnsigned(42, 0));
+    }
 }
