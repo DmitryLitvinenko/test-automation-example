@@ -46,6 +46,12 @@ allure {
 def test = tasks.named("test") {
     useJUnitPlatform {
     }
+
+    systemProperties = [
+            'junit.jupiter.execution.parallel.enabled': true,
+            'junit.jupiter.execution.parallel.config.strategy': 'fixed',
+            'junit.jupiter.execution.parallel.config.fixed.parallelism': 3
+    ]
 }
 
 //run tests with tag "smoke" -> ./gradlew smokeTest
