@@ -13,10 +13,10 @@ Java15, Gradle, Selenide, Junit5, Allure, ...
 note: ./gradlew indicates you are using a gradle wrapper, without wrapper you would need to install it manually,
  for example with brew and use gradle
 ``
-* Run specific test:
-
-        -> ./gradlew test --tests *ExampleTest.negativeTest
-        
+##### Run specific test:
+```
+./gradlew test --tests *ExampleTest.negativeTest
+```        
 ## Official documentation:
 * Allure with Gradle doc:
 https://plugins.gradle.org/plugin/io.qameta.allure
