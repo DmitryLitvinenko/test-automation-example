@@ -6,8 +6,8 @@ Java15, Gradle, Selenide, Junit5, Allure, ...
 ## Run tests with gradle:
 ##### Run all tests:
 ```
-    gradle clean test // gradle need to be installed, for example with brew
-    ./gradlew clean test //not required installed gradle
+    gradle clean test
+    ./gradlew clean test
 ```
 ``
 note: ./gradlew indicates you are using a gradle wrapper, without wrapper you would need to install it manually,
