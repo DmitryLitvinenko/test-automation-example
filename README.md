@@ -1,10 +1,10 @@
 TBD
 
-##Technologies:
+## Technologies:
 Java15, Gradle, Selenide, Junit5, Allure, ...
 
-##Run tests with gradle:
-#####Run all tests:
+## Run tests with gradle:
+##### Run all tests:
 ```
     gradle clean test // gradle need to be installed, for example with brew
     ./gradlew clean test //not required installed gradle
@@ -17,7 +17,7 @@ note: ./gradlew indicates you are using a gradle wrapper, without wrapper you wo
 
         -> ./gradlew test --tests *ExampleTest.negativeTest
         
-##Official documentation:
+## Official documentation:
 * Allure with Gradle doc:
 https://plugins.gradle.org/plugin/io.qameta.allure
 https://github.com/allure-framework/allure-gradle
@@ -27,7 +27,7 @@ https://junit.org/junit5/docs/snapshot/user-guide/
 https://docs.gradle.org/current/userguide/java_plugin.html       
 * Gradle Java testing 
 https://docs.gradle.org/current/userguide/java_testing.html#test_filtering
-##Additional info:
+## Additional info:
 
 * Upgrade Gradle wrapper:
 ```
